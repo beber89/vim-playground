@@ -21,3 +21,7 @@
 - The js functions registered on the html elements on lines ... are implemented in web/actions.go.
 - NB: This is the "bridge" that links operations written in go and its execution within the browser via webassembly.
 - The last script on line ... describes the behaviour of the slider and the js callback is also implemented in web/actions.go.
+
+## actions.go
+- In this code all the js functions called in index.html are implemented.
+- All the functions have the same signature to map to their respective js functions regardless of the arguments or return type of the later.
