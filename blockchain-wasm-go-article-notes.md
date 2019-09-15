@@ -5,6 +5,7 @@
 - It can be looked at as a distributed database run by a swarm of nodes in which it provides consensus algorithms to allow adding entries to that database in a secure and non-repudiable manner so that entries are ensured to be valid.
 - One method to provide achieve is providing Proof of Work (PoW).
 - ~Explain mining~
+- more on blockchains later in part 2 of this tutorial.
 ## Golang
 - Golang shows up as a worthy candidate programming language, suited to run a blockchain across nodes implemented in a Decentralized Application (DApp). 
 - Its performance metrics are comparable to high performing languages like C, C++ and Rust but Go being an easy to learn and to use without sacrificing performance sets it up an edge over them(at least for this article).
@@ -22,7 +23,8 @@
 ## Usecase scenario
 - There are two users Alice and Bob, each one does the following:
  - Suppose Alice opens the browser and navigate to the application.
- - First she identifies herself by picking "Alice" from the dropdown menu.
+ - First she identifies herself by picking "Alice" from a dropdown menu.
+ - She is seeing a window in which she can undergo operations with currency, let us call this unit currency crypsys.
  - Then she clicks "Reward" which in turn her balance adds up 10 more crypsys.
  - Once she is having sufficient amount of crypsys, she buys apples from Bob. 
  - The blockchain is shown as a sequence of blocks on the right.
@@ -109,3 +111,4 @@
  - Bob also share the same blockchain despite he's not involved in transactions
  - another reward then let her buy apples from Bob
  - new block created.
+ - Bob's apples cost Alice 20 crypsys that leaves her with 0 networth while Bob is having 20 networth.
