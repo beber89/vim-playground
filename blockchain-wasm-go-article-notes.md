@@ -118,7 +118,6 @@
 
 # Part II
 ## Introduction
-- Blockchain in summary, PoW
 - In this article I aim at making an attempt to demystify blockchain.
  - by presenting an implementation using Go programming language.
 - In part 1 of this article, the application has been presented as a scenario between two actors Alice and Bob.
@@ -137,17 +136,47 @@
 - A hard problem enough so that one node can not consistently solve it.
  - Hence a proof for group consensus.
  - Create an example with probablity to show that idea (diagram).
+- ~explain difficulty
 #### Mining
 - Nodes loop through nonce values until hash is valid (diagram).
 - In this example I implemented the nonce values I loop through are not incremental.
  - This to allow different nodes in the network to go through different calculations.
 - An example of a block hash,
  - Little endian vs big endian
-- This is a 4 byte hash representing in memory in the figure below (diagram).
+- This is a 4 byte hash representing in memory in the figure below.
+ - in the figure the memory addressing increases from top to bottom of table.
+ - this is how it gets represented finally as an array.
+ - > if we want to enforce the leading zeros condition upon AB0300
+  - it is first converted to 0003AB
  - There can be no 4 byte hash in a real life scenario,
  - but this conveys the idea of its representation in memory as it generalizes to the 64 byte hash.
 
 ## Code
+### Transaction
+- First I define what a transaction is, 
+ - in a real blockchain application transaction most proabably is required to contain more attributes.
+ - but the bare minimum which I choose to present is to have the sender (From) of the transaction.
+ - the reciever (To) and the amount of crypsys (Amount) being transferred.
+- I also allow the transaction to be represented in json format since it being propagated through network.
 ### Blocks
+#### doHash
+- I create a struct for the part of the block to be hashed.
+ - which is basically all the attributes of the block except for the hash.
+- In lines # , these fields are filled then converted to a string.
+- Then in line # the string is hashed and copied into the hash attribute of the block instance.
+#### hashValid
+- Checking the validity of the hash is simply checking the number of leading zeros.
+- Considering the endiannes things shall require a bit more work than just counting zeros.
+- I start by taking  the last 8 bytes of the hash array that is under check.
+ - taking only those 8 bytes is not functionally wrong as long as the difficulty is no more than 64.
+ - which is 8*8 bits.
+- In line # I shift the last byte of the array to take the place of the most significant byte.
+ - of a new uint64 number (hashAsInt).
+ - while the first byte of array forms the least significant byte of the new number.
+ - the rest of array bytes forms the remaining bytes of hashAsInt accordingly in that order.
+ - after finishing that for loop in lines #, I am retreiving back the most significant 64-bits of the hash.
+ - before it getting represented in little-endian representation in the array.
+- Hence now we can check it according to difficulty in lines #.
+#### mine
 ### Blockchain
 ### Networking
