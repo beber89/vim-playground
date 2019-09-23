@@ -136,7 +136,14 @@
 - A hard problem enough so that one node can not consistently solve it.
  - Hence a proof for group consensus.
  - Create an example with probablity to show that idea (diagram).
-- ~explain difficulty
+ - The probability model that describes this scenario is more complex than that.
+ - But the point is to make sense of the fact that the likelihood of getting the block created.
+ - becomes significant if many nodes exist in the network.
+ - hence it prevents a malicious node from introducing fake transactions into the chain. 
+- It is needed to have a level of control on the time in which the nodes take to create a new block.
+ - A harder PoW in turn requires more time, hence we need to control the difficulty of PoW.
+ - In this article difficulty diff is the number of leading zeros in which the hash is required to have.
+  - for the block to be considered valid.  
 #### Mining
 - Nodes loop through nonce values until hash is valid (diagram).
 - In this example I implemented the nonce values I loop through are not incremental.
@@ -169,7 +176,7 @@
 - Considering the endiannes things shall require a bit more work than just counting zeros.
 - I start by taking  the last 8 bytes of the hash array that is under check.
  - taking only those 8 bytes is not functionally wrong as long as the difficulty is no more than 64.
- - which is 8*8 bits.
+ - which is 8\*8 bits .
 - In line # I shift the last byte of the array to take the place of the most significant byte.
  - of a new uint64 number (hashAsInt).
  - while the first byte of array forms the least significant byte of the new number.
@@ -178,5 +185,43 @@
  - before it getting represented in little-endian representation in the array.
 - Hence now we can check it according to difficulty in lines #.
 #### mine
+- One common thing with Bitcoin in this article is that PoW is provided by a mining process.
+- This method mine() implements figure #. 
+- In every iteration of the loop a new hash is extracted for the block by changing the nonce.
+ - by invoking tryNonce() on the block.
+ - as long as the hash is not valid, every 500 iterations the node checks if other node produced a valid hash.
+ - invoking GetObserver() instigates the chainfabric
+ - from which the node can find if there is a response pending from the network or not
+ - if there is a response then it might be the nonce needed for producing the valid hash.
+ - if the hash in that case found to be valid the node fires up an alert to the user that a nonce is mined by other node.
+ - if not , mining continues until a valid hash is produced.
+- > There is a subtelty in line # where this thread goes to sleep for 70 microseconds.
+ - it is worth noting that WebAssembly does not support threading properly yet.
+ - So by letting the thread to go to sleep, the networking chainfabric gets CPU time
+  - to check if there is a response.  
 ### Blockchain
+#### Struct & NewBlockchain() & listener
+- In this file blockchain.go, the blockchain structure and methods are defined.
+- For this application Blockchain struct contains only one attribute chain.
+ - which is an array of Block.
+- The first function NewBlockchain constructs an instance of Blockchain. 
+ - It first invokes GetObserver().
+ - This initializes the underlying networking operations.
+ - By creating a new blockchain the first block is created rightaway.
+ - In blockchain terms it is called genesis block and it does not contain any relevant transaction info.
+  - but its creation is essential for other blocks to follow. 
+- In line # I set a callback, this callback is later called by the underlying network.
+ - when a message is received by the node notifying it that there is a new transaction requested.
+ - The receiving node then might contribute by mining the transaction or ignore it and just add the new block.
+ - in this article it is assumed that nodes mine always mine transaction when they are asked for it.
+- In line # the listener converts the serialized message msg received into a predefined struct.
+ - after that it invokes a new thread that starts mining to create a new block in line #
+ - the transaction information of the block to be created is just extracted priorly from msg.
+ - at the end the chain is mutated by adding that new block to it.
+#### RequestTransaction
+- This method insitigates new transactions, at first it sends a message to the network in line #.
+ - to notify other nodes about a newly requested block that needs to be created.
+- Then it tries to mine for the new block by itself. 
 ### Networking
+#### struct & SetNewTransactionCallback 
+#### Connect
