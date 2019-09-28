@@ -1,0 +1,58 @@
+* Storage
+** TODO Coursera courses
+*** TODO CNN code about 2GB
+** TODO Udemy Flutter course Videos
+** DONE Backup
+** TODO Developer
+- Developer/miniconda3
+  - envs
+  - pkgs
+- Developer/resources
+- Developer/xptform
+- Developer/web
+** [-] ~/Desktop/~Videos
+** Refer to a utube video
+- Clear System Storage on MacOS High Sierra - (Other Space)
+** ~/Library/Caches
+** iMail
+** DONE XAMPP
+** DONE failed iOs updates through itunes eats space.
+- Fine out where have they gone 
+** DONE Two identical docker images
+- mssql image
+- Remove one
+** DONE Users/Dom
+** DONE Dropbox
+** DONE Backup for moto and others
+** DONE Baila
+- surf this to delete the unneeded
+** DONE VMs 
+** find the old android platform tools and delete (new one installed via brew)
+- latest one installed via android studio
+** ~/Developer
+*** miniconda3
+- Developer/miniconda3 
+ - there are many src unpacked packages that is unused
+ - old pkgs unused
+** ~/Downloads
+** devel
+*** Conda
+- Remove most packages of the base.
+ - Because it shares a lot of packages with the env (jupyter)
+*** python
+- either miniconda or the brew installed python
+** …/career/courses
+** Apps
+*** Pycharm
+*** Gimp
+** Appdata
+*** Chrome
+** check applications in ~/Library
+** check applications in /usr/local
+** Android Studio
+- AVD machine
+* Tidy Directories
+** Dropbox Backup
+** dotfiles in Home
+* HD 750GB Storage
+** Storage/Moto/Moto Phone videos Alt storage

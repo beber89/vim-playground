@@ -126,7 +126,7 @@
 ### Revisit program structure
 - Repost drawing again
 ### What you learn
-- understand the inner workings of blockchain.
+- Gain an insight over the inner workings of blockchain.
 - How to create a blockchain in Go. 
 - Consider the distributed aspect of the app carrying out the blockchain operations.
  
@@ -136,7 +136,14 @@
 - A hard problem enough so that one node can not consistently solve it.
  - Hence a proof for group consensus.
  - Create an example with probablity to show that idea (diagram).
- - The probability model that describes this scenario is more complex than that.
+ - Suppose S: event that one node finds the nonce that solves the hash in a time not exceeding ten minutes.
+  - assume for one node we have p(S): probability of event S = 1/1000
+  - which is a very insignificant probability let us now define 
+  - Sn: probability of at least one node solves the hash within the ten minutes in a pool of n number of nodes.
+  - accordingly p(Sn) = 1-(1-p(S))^n.
+  - p(S1000) = 0.6323, p(S10000) = 0.99995 
+  - With a big enough number of contributing nodes, the value jumps significantly from 1/1000 to 0.6323 to nearly one!
+ - The probability model that describes this scenario should be more complex than that.
  - But the point is to make sense of the fact that the likelihood of getting the block created.
  - becomes significant if many nodes exist in the network.
  - hence it prevents a malicious node from introducing fake transactions into the chain. 
@@ -224,4 +231,22 @@
 - Then it tries to mine for the new block by itself. 
 ### Networking
 #### struct & SetNewTransactionCallback 
+- Node struct reflects the networking aspect of the blockchain as it comprises features of the network. 
+- First are the destination ip address toIP and port toPort of the running server tracker.js which is written in nodejs.
+- response attribute holds messages received from the tracker.
+- ws points at the websocket connection.
+- newTransactionCallback is called once the node received a request for a new transaction to be created.
 #### Connect
+- At this point I write the Connect procedure first to establish connection with tracker.
+ - then to register event listeners.
+- First I get the websocket object from the javascript global scope running on the web browser.
+ - from this object New() is invoked passing the url to connect to as an argument.
+ - in this case url is "ws://127.0.0.1:8081/ws"
+- In line #, I register the necessary event listener that is called once a message is received.
+ - The go func callback is wrapped inside a js.FuncOf() which converts go func into a function to be used by javascript.
+ - This is also mentioned in part 1 of this article.
+ - The message is received and parsed then it branches to two cases either it be a transaction request or be it a response.
+  - In the first case the newTransactionCallback is invoked on the transaction, 
+   - this in turn invokes the listener in blockchain.go.
+  - response holds the value of a nonce during the mining process which solves the nonce to achieve the required hash.
+
