@@ -8,11 +8,13 @@
   - envs
   - pkgs
 - Developer/resources
-- Developer/xptform
+- Developer/xptform/smart_home_ac_rc
 - Developer/web
 ** [-] ~/Desktop/~Videos
 ** Refer to a utube video
 - Clear System Storage on MacOS High Sierra - (Other Space)
+** Docker images
+** brew packages
 ** ~/Library/Caches
 ** iMail
 ** DONE XAMPP

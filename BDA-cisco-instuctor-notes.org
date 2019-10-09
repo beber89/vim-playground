@@ -1,0 +1,76 @@
+* Ch 1
+** Volume, Velocity, Veraciy, Variety
+** Privacy issues
+- Require additional caution
+** Categorize data by structure and volatility
+- Structure or unstructured | data in motion or at rest
+** small datasets handled by flat file databases
+- For bigger ones it is crucial to model the relationships between data
+  variables.
+** Exponential increase in data required paradigm shift
+- To meet up this increase we scale horizontally rather than vertically.
+- Massive distributed storing and computation.
+- i.e. NoSql and Hadoop
+
+* Ch 2
+** DIKW pyramid
+** ETL 
+- Extract, Transform and Load
+* Ch 3
+** Exploratory Data Analaysis
+- Supervised Descriptive statistics
+- Takes place after Data Gathering
+- Takes place before Prepare Data step
+- Look for interesting patterns in Data
+** What is Data
+- Data is normally a representation of characeteristics or features of a
+  phenomenon.
+- This features are modeled as variables.
+** Statistics
+- Descriptive Statistics: tells about sample.
+- Inferential Statistics: tries to generalize from sample to population.
+- Describe data using statistical centrality properties like mean, median,
+  mode. 
+  - Describe data using dispersion properties
+  - Describe data using correlation between different variables.
+* Ch 4 
+** learning process
+- Movie Recommendation Example
+ - Throw all data you know about movie
+ - It is not our role to know if this info data is relevant or not
+ - Learning process decides the impact of this piece of info we throw
+** Supervised vs Unsupervised
+** Regression vs Classification
+- They are both Supervised. 
+- Go in details on Regression.
+- Regression gives a mathematical relation between variables.
+** SVM
+- Example for support vector machine
+ - A circle border that seperates two classes is solved using SVM
+** Validation
+** Reliability
+- Ensuring that inference model is repeatable
+** Error Analysis
+- Classify error
+- From where does it orginate
+- How to mitigate
+* Ch 5
+** Know the audience
+** Different types of realizations to convey the message
+* Ch 6
+** Scale up
+- Hardware architectures & Software tools to scale up big data and analytic
+  solutions.
+** Data Engineering
+- This is an independent field in Big data.
+** Big data Pipeline
+- Example: Count population in Egypt above 21 including foreigners.
+ - All ministries possess databases
+  - i.e. Ministry of Higher Education includes foreigner students.
+  - i.e. Ministry of Health and Population includes born and deceased in
+    Egypt.
+  - i.e. Ministry of Interior includes data about foreign workers.
+  - etc...
+ - Kafka subscribes to data published by all ministries.
+  - Data is stored via casandra
+  - Spark computes the count considering redunduncies.

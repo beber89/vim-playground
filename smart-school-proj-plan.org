@@ -2,7 +2,8 @@
 ** Transfer Learning
 *** DONE Find Audio Data
 *** DONE Convert audio to spectrograms
-*** TODO Create spectrogram tensor as map from wav files
+*** DONE Create spectrogram tensor as map from wav files
+*** TODO Create training dataset (shuffle tensors)
 *** TODO Record my trigger phrase
 *** TODO load weights of "Automatic Speaker Recognition"
 *** TODO Train and test
