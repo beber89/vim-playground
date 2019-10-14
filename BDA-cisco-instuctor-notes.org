@@ -1,4 +1,6 @@
 * Ch 1
+** Examples
+- DrivenData: Datascience competitions to build a better world
 ** Volume, Velocity, Veraciy, Variety
 ** Privacy issues
 - Require additional caution
@@ -11,9 +13,35 @@
 - To meet up this increase we scale horizontally rather than vertically.
 - Massive distributed storing and computation.
 - i.e. NoSql and Hadoop
-
+** Data volatility
+- Data at rest: example facebook app, facebook cloud storing data generated
+  by user first then analyzing it to act upon it later.
+- Data in Motion: replace facebook app by an app interfacing with sensor.
+** Evolution to Big data
+- Data problem is not an electronics problem.
+- Data scale is solved by scaling servers horizontally rather than
+  vertically.
 * Ch 2
 ** DIKW pyramid
+*** Wiki
+- It comes from Epistemology, theory of knowledge
+- Data: Facts, Signals, ...
+- Information: who, what, who, where, how many, when
+*** Example
+- Data - Collect temperature readings from multiple, geo-localized sensors.
+- Information - Extract temporal and localization insights. It shows that temperatures are constantly rising globally.
+- Knowledge - Compare multiple hypotheses and it becomes apparent that the rise appears to be caused by human activities, including greenhouse emissions.
+- Wisdom - Work to reduce greenhouse gas emissions.
+** Analytics
+*** Example
+- Predictive analytics - price going where in stock markets
+- Prescriptive analytics - buy or sell in stock markets, even if price goes
+  high volatility might not be suited if reward is not enough for the risk.
+** Role of time in Data
+- Which stocks will most likely have the highest daily gain based on trading in the last hour?
+- What is the best way to route delivery trucks this afternoon, based on morning sales, existing inventory, and current traffic reports?
+- What maintenance is required for this airplane, based on performance data generated during the last flight?
+- i.e. Stock markets, time is very vital especially doing forex scalping.
 ** ETL 
 - Extract, Transform and Load
 * Ch 3
