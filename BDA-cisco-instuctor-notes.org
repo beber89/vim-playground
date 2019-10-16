@@ -34,6 +34,7 @@
 - Wisdom - Work to reduce greenhouse gas emissions.
 ** Analytics
 *** Example
+- descriptive analytics - SF["Category"].value_counts()
 - Predictive analytics - price going where in stock markets
 - Prescriptive analytics - buy or sell in stock markets, even if price goes
   high volatility might not be suited if reward is not enough for the risk.
