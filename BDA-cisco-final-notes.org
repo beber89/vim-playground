@@ -1,0 +1,30 @@
+* examples of structured data
+- Relational DBs
+- Excel spreadsheet
+- e-commerce accounts
+* Plots
+- Column: Compare data accross categories
+- pie: segments equal to 100%
+- Line: Shows trend
+- Scatter: Correlations
+* Pyplot is a matblotlib package that includes styling for plots
+* Plotly: Plot tool available online
+* Ingestion is first stage of pipeline
+* Presentation Logic
+- Explanatory Analysis: tell a story with evidence
+- inductive reasoning: infer results about population from a sample
+- deductive reasoning: come from facts to a conclusion
+* Descriptive stats: summarize a dataset
+* Types of variable 
+- Interval: values from range
+- ordinal: A, B, .. values , order matters
+- discrete: finite set
+* Errors
+- gross Error: Observer record misreading
+- systematic error: ruler broke millimeter
+- random error: 
+* memcaching improves big data applications provided by spark.
+* outlier: data exist outside decision boundary
+* Ask questions about observation is first step of scientific method.
+* supervised vs unsupervised
+
