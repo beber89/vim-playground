@@ -86,10 +86,53 @@
 * Ch 5
 ** Know the audience
 ** Different types of realizations to convey the message
+** RULE: Do not add to the chart components you do not need in presentation
 * Ch 6
 ** Scale up
 - Hardware architectures & Software tools to scale up big data and analytic
   solutions.
+** Architecture
+- Storage Layer
+- Data Processing Paradigm
+- One node fails every 3 years -> one node fails every day in cluster of 1000
+  nodes.
+- GFS key components
+ - Failures are a norm not exception.
+ - write once read many
+- HDFS is an open source implementation of GFS
+- HDFS server roles
+ - Namenode
+ - Datanode
+** Hadoop
+** Spark
+*** MapReduce shortcomings
+- Underutilization of cluster memory
+- Redundant disk I/O
+*** Spark Response
+- RDD abstraction with rich API
+- In-memory distributed computation platform
+- Spark abstracts away the execution detail hence improve developer
+  productivity and code readability.
+- Caching is supported, needed to be applied by developer.
+ - example of two RDDs executed from one common parent RDD.
+ - This common parent needs to be cached otherwise the source file will be
+   loaded from HDFS twice.
+*** Need for RDD
+- computations (K-means, PageRank, ...) known to user code but unknown to the
+  framework hence the framework does not optimize it that is in case of
+  mapreduce.
+- MapReduce is inefficient for iterative computations because it guarantees
+  durability of the result by reading and writing dataset on every iteration.
+  As persisting datasets over and over again requires a lot of I/O time.
+- Transformation : rdd.filter(lambda x: x%2 == 0) => rdd2
+ - Hence rdd2 dependant on rdd
+- Transformations are written by Driver and action is taken on them by
+  executors.
+*** Packages over Spark Core
+- Spark SQL
+- Spark Streaming
+- Spark GraphX
+- Spark MLlib
 ** Data Engineering
 - This is an independent field in Big data.
 ** Big data Pipeline
