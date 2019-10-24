@@ -19,8 +19,48 @@
 - Develop answers especially for part 3 and somehow part 2
 - Examiner is not judging for one slip so don't worry.
 - Part three is about abstract ideas so don't have to provide your own
-  opnion.
+  opinion.
   - Throw examples to help develop answers.
   - "Some people would think .... Well as other people ... But I think
     personally" 
+** Writing
+*** Task 1
+**** Structure
+- Introduction: Paraphrase the question statement
+- Overview: Main features of the graph without mentioning values on the Y-axis, other values are okay to be mentioned.
+ - Keywords: it is clear that; ... 
+- Data description: Mention numbers and figures or you lose points.
+**** Don't
+- Do not reuse same vocabulary in writing
+**** Vocabulary
+- Increase; peak; rise; climb; go up
+- Decrease; decline; drop; fall; go down; plummet
+- plateau; stay the same; stablize; remain unchanged; persists
+- slight; marginal
+- mild; moderate
+- striking; significant; dramatic; great
+- numbers; rates; figures
+**** Grammar
+- It can be seen; the most striking feature was; the numbers increased slightly ~ there was a slight increase;
+**** Hints
+- Cohesion
+ - linking phrases: however; after which; in addition; moreover; eventhough; furthermore
+ - cohesive devices: such a man; he; she; the man
+- It is safer to use simpler tenses in writing task 1
+*** Task 2
+**** Hints
+- cohesive devices: some people, myself included, think that ...
+- Idea -> why | how -> example (you can make examples up)
+ - Tourism creates jobs -> as it is linked to a lot of services -> Spain has a boom in (economy | national income)
+- Do not write titles as it might be considered as an incomplete sentence
+**** Structure: tourism example
+- paragraph 1: Introduction
+- paragraph 2: People -> Creates jobs -> linked to a lot of services -> Spain
+- paragraph 2: Threatens the local identity (people) ~ culture -> introduce foreign (different) habits -> Example: Illegal immigration
+- paragraph 3: Environment ( -> Protect the environment -> Creating new eco projects -> Aswan solar plant (not real) 
+                         ||  -> (waste -> food) | (pollution -> transport) -> New Mexico city )
+- paragraph 4: Conclusion ( -> Summary 
+                         || -> Opinion )
+ - NB: No new ideas !! - Do not mention anything in the conclusion that you did not discuss in prior paragraphs
+
 * Vocab
