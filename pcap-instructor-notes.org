@@ -1,0 +1,27 @@
+* Modules
+** What is a module
+- Teams does not develop code then give it to others as a copy and paste.
+** Strings
+- Explain slicing progressively
+- List of examples
+ - Strings are immutable, implement a function to replace an index in string by character. 
+- Define "immutable"
+- Exhibition: 
+ - index() finds index of first occurence. You find all occurences.
+  - Hint: use count() alongside index()
+  - later: implement it using find()
+ - Implement a function like center() in strings 
+ - Implement a function that converts string to capital letters
+  - Try do it in steps
+ - Implement the title() method by yourself
+- Questions: 
+ - print("This is it!".replace("is", "are")), replace the word "is" only.
+ - Reverse the split() method
+** OOP
+*** edube
+- 1.7: take the example : Max & Cadillac
+- 2.3: drawbacks of procedural approach
+- 3.8: hasattr()
+- List of examples
+ - Employee class | EmployeeDB class
+

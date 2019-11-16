@@ -1,15 +1,15 @@
 * Storage
 ** TODO Coursera courses
 *** TODO CNN code about 2GB
-** TODO Udemy Flutter course Videos
+** DONE Udemy Flutter course Videos
 ** DONE Backup
 ** TODO Developer
-- Developer/miniconda3
-  - envs
-  - pkgs
 - Developer/resources
 - Developer/xptform/smart_home_ac_rc
 - Developer/web
+** TODO Documents
+- AAST
+- Library/Baila
 ** [-] ~/Desktop/~Videos
 ** Refer to a utube video
 - Clear System Storage on MacOS High Sierra - (Other Space)
@@ -31,18 +31,10 @@
 ** DONE VMs 
 ** find the old android platform tools and delete (new one installed via brew)
 - latest one installed via android studio
-** ~/Developer
-*** miniconda3
-- Developer/miniconda3 
- - there are many src unpacked packages that is unused
- - old pkgs unused
 ** ~/Downloads
 ** devel
-*** Conda
-- Remove most packages of the base.
- - Because it shares a lot of packages with the env (jupyter)
 *** python
-- either miniconda or the brew installed python
+- python version 3.4 installed in /usr/local/bin , conflict with /usr/local/Cellar/python/3.7.4_1 installed by homebrew
 ** …/career/courses
 ** Apps
 *** Pycharm
