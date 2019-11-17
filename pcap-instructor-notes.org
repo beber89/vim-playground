@@ -24,4 +24,55 @@
 - 3.8: hasattr()
 - List of examples
  - Employee class | EmployeeDB class
-
+** Files
+*** Rehearse
+- General Presentation on Files
+ - what is a file, bin, text
+ - Directory structure in Windows vs linux
+ - What are File streams or handles and modes
+ - Open streams in different modes
+ - Errors 
+- Work with Files I
+ - Open and read all at once 6.1.9.1
+ - Open and read character by character 6.1.9.2
+ - Open and read line by line readline 6.1.9.4
+ - Open and write line 6.1.9.8
+- Work with Files II 
+ - readlines 6.1.9.5
+ - Open() as an iterator over lines 6.1.9.6
+ - ByteArray as a container for binary data
+  - Each elements takes values 0-255
+ - Show what is inside bytearray in hex 6.1.9.10
+ - Write a bytearray into bin file 6.1.9.11
+ - Read the file using readinto()
+ - Read the file using bytearray(buffer.read()) 6.1.9.12
+ - Write a program to copy files and test it 
+*** Errors
+- 6.1.8.11: 
+ - Write elif statements for error codes
+ - Then introduce the function strerror()
+** Generators, List Comprehensions & Closures
+*** Rehearse
+- List Comprehensions
+ - example: input("How old are you") if age > 25 print "You are a man"
+  - Do inline if statement
+- Generators and Iterators
+ - Distinct between function and generator
+ - Create a Generator as range()
+  - def fun(n): return vs def fun(n): yield
+  - FYI: it is like static keyword in C programming
+ - Make them notice the type of fun()
+  - Show them what it does when you run __next__() in sequence
+ - example: fibonacci 6.1.7.5
+- Lambda
+ - Lambda is a keyword imples that you creating a function in one line
+ - example : squareFun = lambda x: x**2, then add 6.1.7.10
+ - map() the most used function with lambda 6.1.7.12
+ - filter() 6.1.7.12
+*** Examples
+- Lambda
+ - example 1:
+  - squareFun = lambda x: x**2
+  - absFunc = lambda x: x if x >= 0 else -1*x
+  - use that function as an argument to another function 
+  - def error(lst, lst2, kernel): sum(kernel(lst2-lst))
