@@ -1,5 +1,18 @@
-* Modules
-** What is a module
+** Exceptions
+*** Rehearse
+- Talk about the objective of today 
+- Slides
+- simple example of user_input converting to string
+- example from Nimesh
+- lab example
+** Modules
+*** Rehearse
+- slides
+ - || Reloading a Module || : Demonstrate by example
+  - Show the purpose of __name__
+- Go to employees app and start coding
+
+*** What is a module
 - Teams does not develop code then give it to others as a copy and paste.
 ** Strings
 *** Rehearse
@@ -24,6 +37,11 @@
 - Exhibition: 
  - Implement the title() method by yourself
 ** OOP
+*** Rehearse
+- Dictionary effectively carries attributes for variable
+ - likewise, we introduced classes
+- Example: Person objects with methods
+ - fillDetails(name, age) , saySomething: "my name is ...." 
 *** edube
 - 1.7: take the example : Max & Cadillac
 - 2.3: drawbacks of procedural approach
