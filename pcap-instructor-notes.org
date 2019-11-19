@@ -1,3 +1,26 @@
+* Days
+** Day 3
+*** Selected Topics
+- User Interfaces
+*** OOP
+- slides
+- __hidden, __module___ , __name__ , __bases__ 
+- exampleObject.__dict__ makes you see hidden properties but not advisable
+- AttributeError 6.1.3.7
+ - Check if attribute exists 6.1.3.8
+- Introspection & Reflection :
+ - __dict__ , getattr() , isinstance() , setattr()
+ - make a slim version of 6.1.4.10
+- Exception as an object 
+- Look for lab example : 6.1.9.17 last lab
+*** Files
+- Text files
+- Employee app
+** Day 4
+*** Generators
+- 
+*** Packages
+* Lessons
 ** Exceptions
 *** Rehearse
 - Talk about the objective of today 
@@ -82,6 +105,7 @@
   - Do inline if statement
 - Generators and Iterators
  - Distinct between function and generator
+  - Function returns same thing on different calls, Generators are not
  - Create a Generator as range()
   - def fun(n): return vs def fun(n): yield
   - FYI: it is like static keyword in C programming
